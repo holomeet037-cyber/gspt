@@ -11,3 +11,5 @@ requests
 loguru
 flask
 flask-cors
+playwright
+!playwright install
