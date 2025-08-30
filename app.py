@@ -408,8 +408,8 @@ def http_get_timetable_and_calendar():
 def http_get_attendance():
     try:
         creds = request.get_json()
-        username = creds.get('username')
-        password = creds.get('password')
+        username = creds.get('username',"25245a0538")
+        password = creds.get('password',"03112006")
         data = asyncio.run(fetch_attendance(username, password))
         return jsonify({"data": data})
     except Exception as e:
